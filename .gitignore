@@ -10,3 +10,6 @@
 /GovUKFrontend.Components.Test/obj
 /GovUKFrontend.Components.Test/appsettings.Development.json
 /GovUKFrontend.Components.Test/GovUKFrontend.Components.Test.csproj.user
+/GovUKFrontend.Components/wwwroot/assets
+/GovUKFrontend.Components/wwwroot/css
+/GovUKFrontend.Components/wwwroot/js

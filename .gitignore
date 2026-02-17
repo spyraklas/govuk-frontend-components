@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GovUKFrontend.Components/bin/Debug/net10.0
+/GovUKFrontend.Components/node_modules
+/GovUKFrontend.Components/obj
+/GovUKFrontend.Components.Test/bin/Debug/net10.0
+/GovUKFrontend.Components.Test/obj
+/GovUKFrontend.Components.Test/appsettings.Development.json
+/GovUKFrontend.Components.Test/GovUKFrontend.Components.Test.csproj.user

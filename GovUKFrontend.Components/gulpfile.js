@@ -35,7 +35,7 @@ function GdsScripts() {
 }
 
 function GdsStyles() {
-    return src('./node_modules/govuk-frontend/dist/govuk/all.scss')
+    return src('./node_modules/govuk-frontend/dist/govuk/index.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write())

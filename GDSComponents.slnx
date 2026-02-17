@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="GovUKFrontend.Components.Test/GovUKFrontend.Components.Test.csproj" />
+  <Project Path="GovUKFrontend.Components/GovUKFrontend.Components.csproj" />
+</Solution>

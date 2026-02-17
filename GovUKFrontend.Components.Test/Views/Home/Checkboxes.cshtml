@@ -1,0 +1,46 @@
+﻿@model CheckboxesModel
+@{
+    ViewData["Title"] = "Checkboxes Component";
+}
+
+<form method="post" asp-action="Checkboxes">
+    <gds-row id="main-content" class="govuk-body" title="Main Content">
+        <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+            <gds-caption id="heading-caption" size="Large" title="">Testing Checkboxes Component</gds-caption>
+            <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+            <gds-row id="input-test-content" class="govuk-body" title="Input Test Content">
+                <gds-column style="Full">
+                    <gds-checkboxes id="CheckboxesTest" class="test-class" model-state="@ViewBag.ModelState" caption="Test Checkboxes Group" caption-size="Medium" label-type="Label" hint="Test Checkboxes Hint" hint-class="hint-test-class">
+
+                        <gds-checkbox-item name="Checkbox1" class="checkbox-test-class" checked="@Model.Checkbox1" caption="Test checkbox 1" hint="hint for checkbox 1">
+                            <p class="govuk-body">This is a contitional HTML content for checkbox 1</p>
+                        </gds-checkbox-item>
+
+                        <gds-checkbox-item name="Checkbox2" class="checkbox-test-class2" checked="@Model.Checkbox2" caption="Test checkbox 2" hint="hint for checkbox 2">
+                            <p class="govuk-body">This is a contitional HTML content for checkbox 2</p><br />
+                            <gds-button id="GoToButton" href="/Home/Button" target="Self" button-style="Primary" button-type="Link">Go to button page</gds-button>
+                        </gds-checkbox-item>
+
+                        <gds-checkbox-divider id="test-divider" class="test-class-divider">
+                            <p class="govuk-body">or</p>
+                        </gds-checkbox-divider>
+
+                        <gds-checkbox-item name="Checkbox3" class="checkbox-test-class3" checked="@Model.Checkbox3" caption="Test checkbox 3" hint="hint for checkbox 3">
+                        </gds-checkbox-item>
+                    </gds-checkboxes>
+                    <gds-button id="submit-button" name="submit-button" button-type="Submit" button-style="Primary" title="Submit Button">Submit</gds-button>
+                </gds-column>
+            </gds-row>
+
+        </gds-column>
+        <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+            <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+            <br /><br />
+            <partial name="_Menu" />
+
+        </gds-column>
+    </gds-row>
+</form>

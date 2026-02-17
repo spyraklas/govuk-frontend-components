@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Cuemon.AspNetCore.Razor.TagHelpers" Version="10.1.2" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Pack\assets\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="wwwroot\**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Remove="wwwroot\favicon.ico" />
+	</ItemGroup>
+
+</Project>

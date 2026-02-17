@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Button Component";
+}
+<gds-row id="main-content" class="govuk-body" title="Main Content">
+    <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+        <gds-caption id="heading-caption" size="Large" title="">Testing Button Component</gds-caption>
+        <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+        <gds-row id="textarea-validation-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+                <gds-heading type="H3" size="Medium">Button Types</gds-heading>
+                <gds-button id="submit-button" name="submit-button" button-type="Submit" button-style="Primary" title="Submit Button">Submit button</gds-button>
+                <br /><br />
+                <gds-button id="default-button" name="default-button" button-type="Button" button-style="Primary" title="Default Button">Default Button</gds-button>
+                <br /><br />
+                <gds-button id="reset-button" name="reset-button" button-type="Reset" button-style="Primary" title="Reset Button">Reset Button</gds-button>
+                <br /><br />
+                <gds-button id="link-button" href="#" target="Self" button-type="Link" button-style="Primary" title="Link Button">Link Button</gds-button>
+            </gds-column>
+        </gds-row>
+
+        <gds-row id="textarea-character-count-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+                <gds-heading type="H3" size="Medium">Button Styles</gds-heading>
+                <gds-button id="primary-button" name="primary-button" button-type="Button" button-style="Primary" title="Primary Button">Primary Button</gds-button>
+                <br /><br />
+                <gds-button id="secondary-button" name="secondary-button" button-type="Button" button-style="Secondary" title="Secondary Button">Secondary Button</gds-button>
+                <br /><br />
+                <gds-button id="warning-button" name="warning-button" button-type="Button" button-style="Warning" title="Warning Button">Warning Button</gds-button>
+                <br /><br />
+                <gds-button id="inverse-button" name="inverse-button" button-type="Button" button-style="Inverse" title="Inverse Button">Inverse Button</gds-button>
+                <br /><br />
+                <gds-button id="start-button" href="#" target="Self" button-type="Link" button-style="Start" title="Link Button">Start Button</gds-button>
+            </gds-column>
+        </gds-row>
+
+        <gds-row id="textarea-word-count-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+                <gds-heading type="H3" size="Medium">Other Button Settings</gds-heading>
+                <gds-button id="disabled-button" name="disabled-button" button-type="Button" button-style="Disabled" title="Disabled Button" disab>Disabled Button</gds-button>
+                <br /><br />
+                <gds-button id="prevent-double-click-button" name="prevent-double-click-button" prevent-double-click="true" button-type="Button" button-style="Primary" title="Prevent Double Click Button">Prevent Double Click Button</gds-button>
+                <br /><br />
+            </gds-column>
+        </gds-row>
+
+    </gds-column>
+    <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+        <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+        <br /><br />
+        <partial name="_Menu" />
+
+    </gds-column>
+</gds-row>

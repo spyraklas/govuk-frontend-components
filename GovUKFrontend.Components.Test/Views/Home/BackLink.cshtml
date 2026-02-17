@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Back Link Component";
+}
+<gds-row id="main-content" title="Main Content">
+    <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+        <gds-caption id="heading-caption" size="Large" title="">Testing Back Link Component</gds-caption>
+        <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+        <gds-row id="test-back-link-content">
+            <gds-column style="Full">
+                <gds-back-link id="backlinkTest" href="/testTarget" target="Self" title="Back Link">Back link test</gds-back-link>
+            </gds-column>
+        </gds-row>
+
+        <div style="background-color:darkblue;">
+            <gds-row id="test-back-link-summary-content">
+                <gds-column style="Full">
+                    <gds-back-link id="backlinkInverseTest" invert-link="true" title="Back Link Inverse">Back link inverse Test</gds-back-link>
+                </gds-column>
+            </gds-row>
+        </div>
+
+    </gds-column>
+    <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+        <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+        <br /><br />
+        <partial name="_Menu" />
+
+    </gds-column>
+</gds-row>

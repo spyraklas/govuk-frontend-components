@@ -1,0 +1,38 @@
+﻿@model ErrorSummaryModel
+@{
+    ViewData["Title"] = "Error Summary Component";
+}
+
+<form method="post" asp-action="ErrorSummary">
+    <gds-row id="main-content" class="govuk-body" title="Main Content">
+        <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+            <gds-error-summary id="form-errors" class="class-test" model-state="@ViewBag.ModelState"></gds-error-summary>
+
+            <gds-caption id="heading-caption" size="Large" title="">Testing Error Summary Component</gds-caption>
+            <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+            <gds-text-input id="Fullname" name="Fullname" class="test-class" value="@Model.Fullname" model-state="@ViewBag.ModelState">
+                <gds-label for="Fullname" class="custom-label-class" size="Large" Tag="H3" title="Type your full name">Type your full name:</gds-label>
+                <gds-hint name="Fullname" class="custom-hint-class" title="this is a test of a GDS Hint title">You must type your first and last name</gds-hint>
+                <gds-error-messages model-state="@ViewBag.ModelState" for="Fullname"></gds-error-messages>
+            </gds-text-input>
+
+            <gds-textarea id="Comments" name="Comments" class="test-class" value="@Model.Comments" model-state="@ViewBag.ModelState" rows="5" count="Character" max-count="50">
+                <gds-label for="Comments" class="custom-label-class" size="Large" Tag="H3" title="Type your comments">Type your comments:</gds-label>
+                <gds-hint name="Comments" class="custom-hint-class" title="this is a test of a GDS Hint title">Type your comments that should be 50 characters long</gds-hint>
+                <gds-error-messages model-state="@ViewBag.ModelState" for="Comments"></gds-error-messages>
+            </gds-textarea>
+
+            <gds-button id="submit-button" name="submit-button" button-type="Submit" button-style="Primary" title="Submit Button">Submit</gds-button>
+
+        </gds-column>
+        <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+            <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+            <br /><br />
+            <partial name="_Menu" />
+
+        </gds-column>
+    </gds-row>
+</form>

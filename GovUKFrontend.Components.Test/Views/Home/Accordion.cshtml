@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Accordion Component";
+}
+<gds-row id="main-content" title="Main Content">
+    <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+        <gds-caption id="heading-caption" size="Large" title="">Testing Accordion Component</gds-caption>
+        <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+        <gds-row id="test-accordion-content">
+            <gds-column style="Full">
+                <gds-accordion id="test-accordion" title="Test Accordion">
+                    <gds-accordion-section id="test-accordion-item" heading-caption="Section 1" summary-caption="Accordion section 1 summary" title="Test Accordion Section 1">
+                        <p>This is the content of the first accordion section.</p>
+                    </gds-accordion-section>
+                    <gds-accordion-section id="test-accordion-item-2" expanded="true" heading-caption="Section 2" summary-caption="Accordion section 2 summary" title="Test Accordion Section 2">
+                        <p>This is the content of the second accordion section.</p>
+                        <gds-button id="test-accordion-button" type="Button" title="Test Button">Test Button</gds-button>
+                    </gds-accordion-section>
+                </gds-accordion>
+            </gds-column>
+        </gds-row>
+
+        <gds-row id="test-accordion-summary-content">
+            <gds-column style="Full">
+            </gds-column>
+        </gds-row>
+
+    </gds-column>
+    <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+        <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+        <br /><br />
+        <partial name="_Menu" />
+
+    </gds-column>
+</gds-row>

@@ -1,0 +1,104 @@
+﻿@model InputFormModel
+@{
+    ViewData["Title"] = "Text Input Component";
+}
+
+<form method="post" asp-action="TextInput">
+    <gds-row id="main-content" class="govuk-body" title="Main Content">
+        <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+            <gds-caption id="heading-caption" size="Large" title="">Testing Input Text Component</gds-caption>
+            <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+            <gds-row id="input-test-content" class="govuk-body" title="Input Test Content">
+                <gds-column style="Full">
+                    <gds-text-input id="InputTest" name="InputTest" class="test-class" placeholder="Test placeholder" autocomplete="InputTest" value="@Model.InputTest" model-state="@ViewBag.ModelState">
+                        <gds-label for="InputTest" class="custom-label-class" size="Large" Tag="H3" title="this is a label title test">Test Input with Validation:</gds-label>
+                        <gds-hint name="InputTest" class="custom-hint-class" title="this is a test of a GDS Hint title">this is a test of a GDS Hint text</gds-hint>
+                        <gds-error-messages model-state="@ViewBag.ModelState" for="InputTest"></gds-error-messages>
+                    </gds-text-input>
+                    <gds-button id="submit-button" name="submit-button" button-type="Submit" button-style="Primary" title="Submit Button">Submit</gds-button>
+                </gds-column>
+            </gds-row>
+
+            <gds-row id="fixed-width-test-content" class="govuk-body" title="Fixed Width Test Content">
+                <gds-column style="Full">
+                    <gds-heading type="H3" size="Medium">Test fixed width inputs</gds-heading>
+                    <gds-text-input id="InputWidthWidth20" name="InputWidthWidth20" value="@Model.InputWidthWidth20" model-state="@ViewBag.ModelState" input-width="Width20">
+                        <gds-label for="InputWidthWidth20" size="Large" Tag="Label">Input Width 20:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthWidth10" name="InputWidthWidth10" value="@Model.InputWidthWidth10" model-state="@ViewBag.ModelState" input-width="Width10">
+                        <gds-label for="InputWidthWidth10" size="Large" Tag="Label">Input Width 10:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthWidth5" name="InputWidthWidth5" value="@Model.InputWidthWidth5" model-state="@ViewBag.ModelState" input-width="Width5">
+                        <gds-label for="InputWidthWidth5" size="Large" Tag="Label">Input Width 5:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthWidth4" name="InputWidthWidth4" value="@Model.InputWidthWidth4" model-state="@ViewBag.ModelState" input-width="Width4">
+                        <gds-label for="InputWidthWidth4" size="Large" Tag="Label">Input Width 4:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthWidth3" name="InputWidthWidth3" value="@Model.InputWidthWidth3" model-state="@ViewBag.ModelState" input-width="Width3">
+                        <gds-label for="InputWidthWidth3" size="Large" Tag="Label">Input Width 3:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthWidth2" name="InputWidthWidth2" value="@Model.InputWidthWidth2" model-state="@ViewBag.ModelState" input-width="Width2">
+                        <gds-label for="InputWidthWidth2" size="Large" Tag="Label">Input Width 2:</gds-label>
+                    </gds-text-input>
+                </gds-column>
+            </gds-row>
+
+            <gds-row id="fluid-width-test-content" class="govuk-body" title="Fluid Width Test Content">
+                <gds-column style="Full">
+                    <gds-heading type="H3" size="Medium">Test fluid width inputs</gds-heading>
+                    <gds-text-input id="InputWidthFull" name="InputWidthFull" value="@Model.InputWidthFull" model-state="@ViewBag.ModelState" input-width="Full">
+                        <gds-label for="InputWidthFull" size="Large" Tag="Label">Input Full Width:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthThreeQuarters" name="InputWidthThreeQuarters" value="@Model.InputWidthThreeQuarters" model-state="@ViewBag.ModelState" input-width="ThreeQuarters">
+                        <gds-label for="InputWidthThreeQuarters" size="Large" Tag="Label">Input Three Quarters Width:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthTwoThirds" name="InputWidthTwoThirds" value="@Model.InputWidthTwoThirds" model-state="@ViewBag.ModelState" input-width="TwoThirds">
+                        <gds-label for="InputWidthTwoThirds" size="Large" Tag="Label">Input Two Thirds Width:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthOneHalf" name="InputWidthOneHalf" value="@Model.InputWidthOneHalf" model-state="@ViewBag.ModelState" input-width="OneHalf">
+                        <gds-label for="InputWidthOneHalf" size="Large" Tag="Label">Input One Half Width:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthOneThird" name="InputWidthOneThird" value="@Model.InputWidthOneThird" model-state="@ViewBag.ModelState" input-width="OneThird">
+                        <gds-label for="InputWidthOneThird" size="Large" Tag="Label">Input One Third Width:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputWidthOneQuarter" name="InputWidthOneQuarter" value="@Model.InputWidthOneQuarter" model-state="@ViewBag.ModelState" input-width="OneQuarter">
+                        <gds-label for="InputWidthOneQuarter" size="Large" Tag="Label">Input One Quarter Width:</gds-label>
+                    </gds-text-input>
+                </gds-column>
+            </gds-row>
+
+            <gds-row id="inputmode-test-content" class="govuk-body" title="Input Mode Test Content">
+                <gds-column style="Full">
+                    <gds-heading type="H3" size="Medium">Test input mode</gds-heading>
+                    <gds-text-input id="InputNumeric" name="InputNumeric" value="@Model.InputNumeric" model-state="@ViewBag.ModelState" input-mode="Numeric">
+                        <gds-label for="InputNumeric" size="Large" Tag="Label">Input numeric mode:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputDecimal" name="InputDecimal" value="@Model.InputDecimal" model-state="@ViewBag.ModelState" input-mode="Decimal">
+                        <gds-label for="InputDecimal" size="Large" Tag="Label">Input decimal mode:</gds-label>
+                    </gds-text-input>
+                    <gds-text-input id="InputCode" name="InputCode" value="@Model.InputCode" model-state="@ViewBag.ModelState" extra-letter-spacing="true" disabled="true">
+                        <gds-label for="InputCode" size="Large" Tag="Label">Input code letter with spaces disabled mode:</gds-label>
+                    </gds-text-input>
+                </gds-column>
+            </gds-row>
+
+            <gds-row id="prefix-suffix-test-content" class="govuk-body" title="Input with Prefix and Suffix Test Content">
+                <gds-column style="Full">
+                    <gds-text-input id="InputSuffixPrefix" name="InputSuffixPrefix" value="@Model.InputSuffixPrefix" model-state="@ViewBag.ModelState" prefix="£" suffix="per item" input-width="Width5">
+                        <gds-label for="InputSuffixPrefix" size="Large" Tag="Label">Input with Prefix and Suffix:</gds-label>
+                    </gds-text-input>
+                </gds-column>
+            </gds-row>
+
+        </gds-column>
+        <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+            <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+            <br /><br />
+            <partial name="_Menu" />
+
+        </gds-column>
+    </gds-row>
+</form>

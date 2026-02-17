@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Table Component";
+}
+<gds-row id="main-content" class="govuk-body" title="Main Content">
+    <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+        <gds-caption id="heading-caption" size="Large" title="">Testing Table Component</gds-caption>
+        <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+        <gds-row id="textarea-validation-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+
+                <gds-table id="test-table" caption="Account Status" caption-size="Medium" title="Test table">
+                    <gds-table-head>
+                        <gds-table-row>
+                            <gds-table-cell scope="Column" type="Header" style="OneHalf">
+                                Name
+                            </gds-table-cell>
+                            <gds-table-cell scope="Column" type="Header" style="OneHalf">
+                                Status
+                            </gds-table-cell>
+                        </gds-table-row>
+                    </gds-table-head>
+                    <gds-table-body>
+                        <gds-table-row>
+                            <gds-table-cell scope="Row" type="Header" style="OneHalf">
+                                Anna Summers
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneHalf">
+                                Active
+                            </gds-table-cell>
+                        </gds-table-row>
+                        <gds-table-row>
+                            <gds-table-cell scope="Row" type="Header" style="OneHalf">
+                                George Simons
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneHalf">
+                                Disabled
+                            </gds-table-cell>
+                        </gds-table-row>
+                        <gds-table-row>
+                            <gds-table-cell scope="Row" type="Header" style="OneHalf">
+                                Jonh Taylor
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneHalf">
+                                Pending Approval
+                            </gds-table-cell>
+                        </gds-table-row>
+                    </gds-table-body>
+                </gds-table>
+
+            </gds-column>
+        </gds-row>
+
+        <gds-row id="textarea-validation-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+
+                <gds-table id="test-table" caption="Months and rates" caption-size="Medium" title="Test table">
+                    <gds-table-head>
+                        <gds-table-row>
+                            <gds-table-cell scope="Column" type="Header" style="OneThird">
+                                Month you apply
+                            </gds-table-cell>
+                            <gds-table-cell scope="Column" type="Header" style="OneThird" is-numeric="true">
+                                Rate for bicycles
+                            </gds-table-cell>
+                            <gds-table-cell scope="Column" type="Header" style="OneThird" is-numeric="true">
+                                Rate for vehicles
+                            </gds-table-cell>
+                        </gds-table-row>
+                    </gds-table-head>
+                    <gds-table-body>
+                        <gds-table-row>
+                            <gds-table-cell scope="Row" type="Header" style="OneThird">
+                                January
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneThird" is-numeric="true">
+                                £85
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneThird" is-numeric="true">
+                                £95
+                            </gds-table-cell>
+                        </gds-table-row>
+                        <gds-table-row>
+                            <gds-table-cell scope="Row" type="Header" style="OneThird">
+                                February
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneThird" is-numeric="true">
+                                £75
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneThird" is-numeric="true">
+                                £55
+                            </gds-table-cell>
+                        </gds-table-row>
+                        <gds-table-row>
+                            <gds-table-cell scope="Row" type="Header" style="OneThird">
+                                March
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneThird" is-numeric="true">
+                                £165
+                            </gds-table-cell>
+                            <gds-table-cell type="Content" style="OneThird" is-numeric="true">
+                                £125
+                            </gds-table-cell>
+                        </gds-table-row>
+                    </gds-table-body>
+                </gds-table>
+
+            </gds-column>
+        </gds-row>
+    </gds-column>
+    <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+        <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+        <br /><br />
+        <partial name="_Menu" />
+
+    </gds-column>
+</gds-row>

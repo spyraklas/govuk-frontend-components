@@ -131,6 +131,12 @@ namespace GovUKFrontend.Components.Test.Controllers
         }
 
         [HttpGet]
+        public IActionResult Details()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Table()
         {
             return View();

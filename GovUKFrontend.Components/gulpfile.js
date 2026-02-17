@@ -10,7 +10,7 @@ const del = require('del');
 
 // Clean the wwwroot folder
 function clean() {   
-    return del(['./wwwroot/**']);
+    return del(['./wwwroot/**', '!./wwwroot/favicon.ico']);
 }
 
 // GDS files

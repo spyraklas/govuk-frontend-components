@@ -148,6 +148,26 @@ namespace GovUKFrontend.Components.Test.Controllers
         }
 
         [HttpGet]
+        public IActionResult Select()
+        {
+            var model = new SelectModel();
+            ViewBag.ModelState = ModelState;
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Select(SelectModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Select");
+            }
+
+            ViewBag.ModelState = ModelState;
+            return View(model);
+        }
+
+        [HttpGet]
         public IActionResult ErrorSummary()
         {
             var model = new ErrorSummaryModel();

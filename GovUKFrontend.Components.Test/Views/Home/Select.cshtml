@@ -1,0 +1,34 @@
+﻿@model SelectModel
+@{
+    ViewData["Title"] = "Select Component";
+}
+
+<form method="post" asp-action="Select">
+    <gds-row id="main-content" class="govuk-body" title="Main Content">
+        <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+            <gds-caption id="heading-caption" size="Large" title="">Testing Select Component</gds-caption>
+            <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+            <gds-row id="select-test-content" class="govuk-body" title="Select Test Content">
+                <gds-column style="Full">
+                    <gds-select name="SelectTest" class="test-class" model-state="@ViewBag.ModelState" caption="Test Select" caption-size="Medium" hint="Test Select Hint" hint-class="hint-test-class">
+                        <gds-select-item class="test-option-class" model-value="@Model.SelectTest" value="">No Option Selected</gds-select-item>
+                        <gds-select-item class="test-option-class" model-value="@Model.SelectTest" value="Option1">Option 1</gds-select-item>
+                        <gds-select-item class="test-option-class" model-value="@Model.SelectTest" value="Option2">Option 2</gds-select-item>
+                        <gds-select-item class="test-option-class" model-value="@Model.SelectTest" value="Option3">Option 3</gds-select-item>                  
+                    </gds-select>
+                    <gds-button id="submit-button" name="submit-button" button-type="Submit" button-style="Primary" title="Submit Button">Submit</gds-button>
+                </gds-column>
+            </gds-row>
+
+        </gds-column>
+        <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+            <partial name="_DfEImage" />
+            <br /><br />
+            <partial name="_Menu" />
+
+        </gds-column>
+    </gds-row>
+</form>

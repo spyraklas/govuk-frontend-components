@@ -10,4 +10,8 @@
     <ProjectReference Include="..\GovUKFrontend.Components\GovUKFrontend.Components.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\images\" />
+  </ItemGroup>
+
 </Project>

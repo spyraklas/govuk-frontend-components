@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
     [HtmlTargetElement("gds-text-input")]
     public class GdsTextInputTagHelper : BaseTagHelper

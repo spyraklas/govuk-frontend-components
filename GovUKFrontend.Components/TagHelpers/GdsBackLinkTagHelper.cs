@@ -2,7 +2,7 @@
 using GovUKFrontend.Components.Factory;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
     [HtmlTargetElement("gds-back-link")]
     public class GdsBackLinkTagHelper : BaseTagHelper

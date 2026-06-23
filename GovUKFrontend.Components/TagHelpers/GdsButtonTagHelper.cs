@@ -2,7 +2,7 @@
 using GovUKFrontend.Components.Factory;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
     [HtmlTargetElement("gds-button")]
     public class GdsButtonTagHelper : BaseTagHelper
@@ -10,6 +10,7 @@ namespace GovUKFrontend.Components.Components
         private const string ArrowHtml = @"<svg class=""govuk-button__start-icon"" xmlns=""http://www.w3.org/2000/svg"" width=""17.5"" height=""19"" viewBox=""0 0 33 40"" aria-hidden=""true"" focusable=""false""><path fill=""currentColor"" d=""M0 0h13l20 20-20 20H0l20-20z"" /></svg>";
 
         public string Id { get; set; }
+        public string Name { get; set; }
         public ButtonType ButtonType { get; set; }
         public ButtonStyle ButtonStyle { get; set; }
         public string Class { get; set; }
@@ -51,7 +52,11 @@ namespace GovUKFrontend.Components.Components
             }
             if (!string.IsNullOrEmpty(Id))
             {
-                output.Attributes.SetAttribute("id", $"{Id}");
+                output.Attributes.SetAttribute("id", Id);
+            }
+            if (!string.IsNullOrEmpty(Name))
+            {
+                output.Attributes.SetAttribute("name", Name);
             }
             if (ButtonStyle == ButtonStyle.Disabled)
             {

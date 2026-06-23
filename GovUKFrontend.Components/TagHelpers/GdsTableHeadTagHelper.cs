@@ -1,7 +1,7 @@
 ﻿using GovUKFrontend.Components.Factory;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
     [HtmlTargetElement("gds-table-head")]
     public class GdsTableHeadTagHelper : BaseTagHelper

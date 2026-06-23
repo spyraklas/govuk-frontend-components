@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
     [HtmlTargetElement("gds-error-summary")]
     public class GdsErrorSummaryTagHelper : BaseTagHelper

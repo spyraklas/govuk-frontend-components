@@ -1,12 +1,12 @@
 ﻿using GovUKFrontend.Components.Factory;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
-    [HtmlTargetElement("gds-row")]
-    public class GdsRowTagHelper: BaseTagHelper
+    [HtmlTargetElement("gds-hint")]
+    public class GdsHintTagHelper : BaseTagHelper
     {
-        public string Id { get; set; }
+        public string Name { get; set; }
         public string Class { get; set; }
         public string Title { get; set; }
 
@@ -18,11 +18,11 @@ namespace GovUKFrontend.Components.Components
             {
                 output.Attributes.SetAttribute("title", Title);
             }
-            if (!string.IsNullOrEmpty(Id))
+            if (!string.IsNullOrEmpty(Name))
             {
-                output.Attributes.SetAttribute("id", $"{Id}");
+                output.Attributes.SetAttribute("id", $"{Name}-hint");
             }
-            output.Attributes.SetAttribute("class", $"govuk-grid-row {Class}");
+            output.Attributes.SetAttribute("class", $"govuk-hint {Class}");
         }
     }
 }

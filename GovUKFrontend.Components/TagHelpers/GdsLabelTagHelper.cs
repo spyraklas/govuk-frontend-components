@@ -2,7 +2,7 @@
 using GovUKFrontend.Components.Factory;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
     [HtmlTargetElement("gds-label")]
     public class GdsLabelTagHelper : BaseTagHelper

@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Breadcrumbs Component";
+}
+<gds-row id="main-content" class="govuk-body" title="Main Content">
+    <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+        <gds-caption id="heading-caption" size="Large" title="">Testing Breadcrumbs Component</gds-caption>
+        <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+        <gds-row id="textarea-validation-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+                <gds-breadcrumbs id="breadcrumbs" class="govuk-body" title="Breadcrumbs Test Content">
+                    <gds-breadcrumbs-item href="#" target="Blank">Home</gds-breadcrumbs-item>
+                    <gds-breadcrumbs-item href="#" target="Top">Section</gds-breadcrumbs-item>
+                    <gds-breadcrumbs-item href="#" target="Parent">Subsection</gds-breadcrumbs-item>
+                    <gds-breadcrumbs-item href="#" target="Self">Current Page</gds-breadcrumbs-item>
+                </gds-breadcrumbs>
+            </gds-column>
+        </gds-row>
+
+        <gds-row id="textarea-character-count-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+                <gds-heading type="H3" size="Medium">Mobile collapse example:</gds-heading>
+                <gds-breadcrumbs id="breadcrumbs" class="govuk-body" title="Breadcrumbs Test Content" collapse-on-mobile="true">
+                    <gds-breadcrumbs-item href="#">Home</gds-breadcrumbs-item>
+                    <gds-breadcrumbs-item href="#">Section</gds-breadcrumbs-item>
+                    <gds-breadcrumbs-item href="#">Subsection</gds-breadcrumbs-item>
+                    <gds-breadcrumbs-item href="#">Current Page</gds-breadcrumbs-item>
+                </gds-breadcrumbs>
+            </gds-column>
+        </gds-row>
+
+        <gds-row id="textarea-word-count-test-content" class="govuk-body" title="Input Test Content">
+            <gds-column style="Full">
+                <gds-heading type="H3" size="Medium">Inverse example:</gds-heading>
+                <div style="background-color:cornflowerblue;">
+                    <gds-breadcrumbs id="breadcrumbs" class="govuk-body" title="Breadcrumbs Test Content" inverse="true">
+                        <gds-breadcrumbs-item href="#">Home</gds-breadcrumbs-item>
+                        <gds-breadcrumbs-item href="#">Section</gds-breadcrumbs-item>
+                        <gds-breadcrumbs-item href="#">Subsection</gds-breadcrumbs-item>
+                        <gds-breadcrumbs-item href="#">Current Page</gds-breadcrumbs-item>
+                    </gds-breadcrumbs>
+                </div>
+            </gds-column>
+        </gds-row>
+
+    </gds-column>
+    <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+        <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+        <br /><br />
+        <partial name="_Menu" />
+
+    </gds-column>
+</gds-row>

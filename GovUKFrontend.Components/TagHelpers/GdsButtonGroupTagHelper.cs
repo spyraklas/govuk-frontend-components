@@ -1,35 +1,31 @@
 ﻿using GovUKFrontend.Components.Common;
 using GovUKFrontend.Components.Factory;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace GovUKFrontend.Components.Components
+namespace GovUKFrontend.Components.TagHelpers
 {
-    [HtmlTargetElement("gds-heading")]
-    public class GdsHeadingTagHelper : BaseTagHelper
+    [HtmlTargetElement("gds-button-group")]
+    public class GdsButtonGroupTagHelper : BaseTagHelper
     {
         public string Id { get; set; }
         public string Class { get; set; }
         public string Title { get; set; }
-        public HeadingSize Size { get; set; }
-        public HeadingType Type { get; set; }
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            output.TagName = GetHeadingTag(Type);
-
-            if (!string.IsNullOrEmpty(Id))
-            {
-                output.Attributes.SetAttribute("id", $"{Id}");
-            }
+            output.TagName = "div";
 
             if (!string.IsNullOrEmpty(Title))
             {
                 output.Attributes.SetAttribute("title", Title);
             }
+            if (!string.IsNullOrEmpty(Id))
+            {
+                output.Attributes.SetAttribute("id", $"{Id}");
+            }
+            output.Attributes.SetAttribute("class", $"govuk-button-group {Class}");
 
-            output.Attributes.SetAttribute("class", $"govuk-heading{GetHeadingSize(Size)} {Class}");
         }
-
-
     }
 }

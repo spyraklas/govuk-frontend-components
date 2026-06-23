@@ -1,0 +1,46 @@
+﻿@model DateFormModel
+@{
+    ViewData["Title"] = "Date Input Component";
+}
+
+<form method="post" asp-action="DateInput">
+    <gds-row id="main-content" class="govuk-body" title="Main Content">
+        <gds-column id="main-content-left-column" style="TwoThirds" class="govuk-body" title="Main Content Column">
+
+            <gds-caption id="heading-caption" size="Large" title="">Testing Date Input Component</gds-caption>
+            <gds-heading type="H1" size="Large">Test Project for GDS Components</gds-heading>
+
+            <gds-row id="input-test-content" class="govuk-body" title="Input Test Content">
+                <gds-column style="Full">
+                    <gds-date-input id="DateInputTest" name="DateInputTest" class="test-class" value="@Model.DateInputTest" model-state="@ViewBag.ModelState" data-invalid-label="Date input testing field">
+                        <gds-label for="DateInputTest" class="custom-label-class" size="Large" Tag="H3" title="this is a label title test">Date input testing field</gds-label>
+                        <gds-hint id="DateInputTest-hint" class="custom-hint-class" title="this is a hint title test">This is a hint for the date input testing field</gds-hint>
+                        <gds-error-messages model-state="@ViewBag.ModelState" for="DateInputTest"></gds-error-messages>
+                        <gds-error-messages model-state="@ViewBag.ModelState" for="DateInputTest-Day"></gds-error-messages>
+                        <gds-error-messages model-state="@ViewBag.ModelState" for="DateInputTest-Month"></gds-error-messages>
+                        <gds-error-messages model-state="@ViewBag.ModelState" for="DateInputTest-Year"></gds-error-messages>
+                    </gds-date-input>
+                    <gds-button id="submit-button" name="submit-button" button-type="Submit" button-style="Primary" title="Submit Button">Submit</gds-button>
+                </gds-column>
+            </gds-row>
+
+            <gds-row id="fixed-width-test-content" class="govuk-body" title="Fixed Width Test Content">
+                <gds-column style="Full">
+                </gds-column>
+            </gds-row>
+
+            <gds-row id="prefix-suffix-test-content" class="govuk-body" title="Input with Prefix and Suffix Test Content">
+                <gds-column style="Full">
+                </gds-column>
+            </gds-row>
+
+        </gds-column>
+        <gds-column id="main-content-right-column" class="govuk-body" style="OneThird" title="Main Content Right Column">
+
+            <img src="https://dfeconnect.education.gov.uk/images/dfe-logo-alt.png" height="120px" alt="DfE logo" title="Dfe Logo" />
+            <br /><br />
+            <partial name="_Menu" />
+
+        </gds-column>
+    </gds-row>
+</form>

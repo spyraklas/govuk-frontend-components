@@ -1,7 +1,6 @@
 using GovUKFrontend.Components.TagHelpers;
 using GovUKFrontend.Components.Test.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace GovUKFrontend.Components.Test.Controllers
 {
@@ -42,8 +41,6 @@ namespace GovUKFrontend.Components.Test.Controllers
 
             return View(model);
         }
-
-
 
         [HttpGet]
         public IActionResult TextInput()
@@ -131,6 +128,26 @@ namespace GovUKFrontend.Components.Test.Controllers
         }
 
         [HttpGet]
+        public IActionResult Radios()
+        {
+            var model = new RadiosModel();
+            ViewBag.ModelState = ModelState;
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Radios(RadiosModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Radios");
+            }
+
+            ViewBag.ModelState = ModelState;
+            return View(model);
+        }
+
+        [HttpGet]
         public IActionResult ErrorSummary()
         {
             var model = new ErrorSummaryModel();
@@ -182,7 +199,5 @@ namespace GovUKFrontend.Components.Test.Controllers
         {
             return View();
         }
-
-
     }
 }

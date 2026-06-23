@@ -13,3 +13,7 @@
 /GovUKFrontend.Components/wwwroot/assets
 /GovUKFrontend.Components/wwwroot/css
 /GovUKFrontend.Components/wwwroot/js
+/GovUKFrontend.Components.Test/node_modules
+/GovUKFrontend.Components.Test/wwwroot/assets
+*.TMP
+/GovUKFrontend.Components.Test/package-lock.json
